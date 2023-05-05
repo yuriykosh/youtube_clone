@@ -9,18 +9,16 @@ import {
   SearchFeed,
 } from './components/index';
 
-const App = () => {
-  return (
-    <Box sx={{ backgroundColor: '#000' }} color="#fff">
-      <Navbar />
-      <Routes>
-        <Route path="/" exact element={<Feed />} />
-        <Route path="/video/:id" element={<VideoDetail />} />
-        <Route path="/channel/:id" element={<ChannelDetail />} />
-        <Route path="/search/:searchTerm" element={<SearchFeed />} />
-      </Routes>
-    </Box>
-  );
-};
+const App = () => (
+  <Box sx={{ backgroundColor: '#000' }}>
+    <Navbar />
+    <Routes>
+      <Route path="/" exact element={<Feed />} />
+      <Route path="/video/:id" element={<VideoDetail />} />
+      <Route path="/channel/:id" element={<ChannelDetail />} />
+      <Route path="/search/:searchTerm" element={<SearchFeed />} />
+    </Routes>
+  </Box>
+);
 
 export default App;
