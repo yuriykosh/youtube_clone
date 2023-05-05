@@ -10,16 +10,17 @@ import {
 } from './components/index';
 
 const App = () => {
-  <Box sx={{ backgroundColor: '#000' }} height="150px">
-    <>hello</>
-    <Navbar />
-    <Routes>
-      <Route path="/" exact element={<Feed />} />
-      <Route path="/video/:id" element={<VideoDetail />} />
-      <Route path="/channel/:id" element={<ChannelDetail />} />
-      <Route path="/search/:searchTerm" element={<SearchFeed />} />
-    </Routes>
-  </Box>;
+  return (
+    <Box sx={{ backgroundColor: '#000' }} color="#fff">
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Feed />} />
+        <Route path="/video/:id" element={<VideoDetail />} />
+        <Route path="/channel/:id" element={<ChannelDetail />} />
+        <Route path="/search/:searchTerm" element={<SearchFeed />} />
+      </Routes>
+    </Box>
+  );
 };
 
 export default App;
